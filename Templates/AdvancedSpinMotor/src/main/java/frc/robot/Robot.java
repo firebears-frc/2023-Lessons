@@ -4,7 +4,7 @@
 
 package frc.robot;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.TalonSRXControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -19,20 +19,19 @@ import edu.wpi.first.wpilibj.XboxController;
  * making it easy to work together.
  */
 public class Robot extends TimedRobot {
-  private static final int kMotorPort = 25;
-  private static final int kJoystickPort = 0;
+  private static final int MotorPort = 25;
+  private static final int ControllerPort = 0;
   
   private TalonSRX m_motor;
-  private XboxController m_joystick;
+  private XboxController m_controller;
 
   @Override
   public void robotInit() {
-    m_motor = new TalonSRX(kMotorPort);
-    m_joystick = new XboxController(kJoystickPort);
+    m_motor = new TalonSRX(MotorPort);
+    m_controller = new XboxController(ControllerPort);
   }
 
   @Override
   public void teleopPeriodic() {
-    m_motor.set(ControlMode.PercentOutput, m_joystick.getLeftY());
   }
 }
