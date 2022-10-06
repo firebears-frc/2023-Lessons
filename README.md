@@ -4,9 +4,9 @@ Firebears' programming resources for learning programming
 
 ## Organization
 
-`master` branch has all files 
-`spinmotor` branch has only template files for the wheel motor 
-`romi` branch has romi files
+`master` branch has all files  
+`spinmotor` branch has only template files for the wheel motor  
+`romi` branch has romi files  
 
 
 
