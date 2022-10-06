@@ -5,7 +5,7 @@
 package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.TalonSRXControlMode;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
@@ -22,12 +22,12 @@ public class Robot extends TimedRobot {
   private static final int MotorPort = 25;
   private static final int ControllerPort = 0;
   
-  private TalonSRX m_motor;
+  private WPI_TalonSRX m_motor;
   private XboxController m_controller;
 
   @Override
   public void robotInit() {
-    m_motor = new TalonSRX(MotorPort);
+    m_motor = new WPI_TalonSRX(MotorPort);
     m_controller = new XboxController(ControllerPort);
   }
 
